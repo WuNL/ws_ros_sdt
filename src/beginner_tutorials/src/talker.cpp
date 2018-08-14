@@ -23,7 +23,7 @@ int main(int argc, char **argv)
   /**
    * NodeHandle is the main access point to communications with the ROS system.
    * The first NodeHandle constructed will fully initialize this node, and the last
-   * NodeHandle destructed will close down the node.
+   * NodeHandle destructed will close down the node.1
    */
   ros::NodeHandle n;
 
