@@ -9,6 +9,8 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 
+#include "test.h"
+
 ros::Publisher pub;
 
 void
@@ -30,6 +32,10 @@ main (int argc, char** argv)
     // Initialize ROS
     ros::init (argc, argv, "my_pcl_tutorial");
     ros::NodeHandle nh;
+
+    ros::NodeHandle pri("~");
+
+    test mytest;
 
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe ("input", 1, cloud_cb);

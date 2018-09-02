@@ -117,12 +117,14 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
   ${catkin_INCLUDE_DIRS}
 )
 
+add_subdirectory(mylib)
+
 add_executable(example src/main.cpp)
-target_link_libraries(example ${catkin_LIBRARIES})
+target_link_libraries(example ${catkin_LIBRARIES} wunlLib)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
